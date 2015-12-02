@@ -1,0 +1,40 @@
+diff --git a/lib/engines/webkit2.js b/lib/engines/webkit2.js
+index 4d68374..c13b8e1 100644
+--- a/lib/engines/webkit2.js
++++ b/lib/engines/webkit2.js
+@@ -3,7 +3,10 @@
+  *
+  * @see https://github.com/macbre/phantomas/pull/531
+  */
+-var pkg = require('phantomjs2');
++var pkg = {
++	path: '/usr/local/bin/phantomjs',
++	version: '2.0.1-development'
++};
+ 
+ module.exports = {
+ 	name: 'PhantomJS',
+diff --git a/package.json b/package.json
+index 5522937..f9150b5 100644
+--- a/package.json
++++ b/package.json
+@@ -22,7 +22,6 @@
+     "node": ">=0.10"
+   },
+   "dependencies": {
+-    "analyze-css": "0.10.x",
+     "ansicolors": "~0.3.2",
+     "ansistyles": "~0.1.0",
+     "ascii-table": "0.0.8",
+@@ -36,11 +35,8 @@
+     "node-statsd": "0.1.1",
+     "node-uuid": "~1.4.1",
+     "optimist": "0.6.x",
+-    "phantomjs": "^1.9.15",
+-    "phantomjs2": "macbre/phantomjs2-npm#version-2.0",
+     "progress": "~1.1.4",
+     "q": "^1.4.1",
+-    "slimerjs": "^0.9.5",
+     "tap": "^0.7.1",
+     "tap-eater": ">=0.0.1",
+     "travis-fold": ">=0.1.2"
