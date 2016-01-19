@@ -1,3 +1,18 @@
+diff --git a/bin/phantomas.js b/bin/phantomas.js
+index 39b669a..f811825 100755
+--- a/bin/phantomas.js
++++ b/bin/phantomas.js
+@@ -9,6 +9,10 @@
+  */
+ 'use strict';
+
++var EventEmitter = require('events').EventEmitter;
++var Log = require('elasticsearch/src/lib/log');
++Log.prototype.listenerCount = EventEmitter.prototype.listenerCount;
++
+ var phantomas = require('..'),
+ 	async = require('async'),
+ 	debug = require('debug')('phantomas:cli'),
 diff --git a/lib/engines/webkit2.js b/lib/engines/webkit2.js
 index 4d68374..c13b8e1 100644
 --- a/lib/engines/webkit2.js
