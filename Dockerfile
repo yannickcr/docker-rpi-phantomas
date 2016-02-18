@@ -10,9 +10,9 @@ COPY . /usr/bin
 RUN [ "cross-build-start" ]
 
 # Versions
-ENV NODE_VERSION 5.4.1
-ENV PHANTOM_VERSION 2.0
-ENV PHANTOMAS_VERSION 1.13.0
+ENV NODE_VERSION 5.6.0
+ENV PHANTOM_VERSION 2.1.1
+ENV PHANTOMAS_VERSION 1.14.0
 
 # Packages
 RUN apt-get update && \
